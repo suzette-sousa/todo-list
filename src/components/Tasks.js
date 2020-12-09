@@ -4,7 +4,7 @@ class Tasks extends React.Component {
   render() {
     return (
       <div>
-        <h2>{Tasks}</h2>
+        <h2>{this.props.list.title}</h2>
       </div>
     )
   }
