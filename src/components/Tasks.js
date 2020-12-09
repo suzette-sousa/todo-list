@@ -16,8 +16,9 @@ class Tasks extends React.Component {
   render() {
     return (
       <div style={this.myStyle()}>
+        <input type="checkbox" onChange={this.props.onComplete.bind(this, this.props.list.id)} />
         <h2>{this.props.list.title}</h2>
-        <input type="checkbox" onchange={this.props.onComplete} />
+        <button onClick={this.props.delTask.bind(this, this.props.list.id)} style={{background: 'none', border: 'none', color: '#e91e63', padding: '0.5rem', marginLeft: 'auto', fontSize: '1.6rem'}}>X</button>
       </div>
     )
   }

@@ -22,10 +22,32 @@ class App extends React.Component {
       },
     ]
   }
+
+  onComplete = (id) => {
+    this.setState ({
+      todos: this.state.todos.map(
+        list => {
+          if(list.id === id) {
+            list.finished = !list.finished;
+          }
+          return list;
+        }
+      )
+    })
+  }
+
+  delTask = (id) => {
+    this.setState ({
+      todos: [...this.state.todos.filter(
+        list => list.id !== id
+      )]
+    })
+  }
+
   render () {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} onComplete={this.onComplete} delTask={this.delTask} />
       </div>
     );
   }
