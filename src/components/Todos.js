@@ -1,12 +1,11 @@
 import React from 'react';
+import Tasks from './Tasks';
 
 class Todos extends React.Component {
   render() {
-    return (
-      <div>
-        <h1>Todo List</h1>
-      </div>
-    )
+    return this.props.todos.map((list) => (
+      <Tasks />
+    ))
   }
 }
 
