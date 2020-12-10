@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Todos from './components/Todos';
 import Header from './components/functional/Header';
+import AddToList from './components/AddToList';
+import { nanoid } from "nanoid";
 
 class App extends React.Component {
   state = {
@@ -45,10 +47,22 @@ class App extends React.Component {
     })
   }
 
+  addToList = (title) => {
+    const newTodo = {
+      id: nanoid(),
+      title,
+      finished: false
+    }
+    this.setState ({
+      todos: [...this.state.todos, newTodo]
+    })
+  }
+
   render () {
     return (
       <div className="App">
         <Header />
+        <AddToList addToList={this.addToList} />
         <Todos todos={this.state.todos} onComplete={this.onComplete} delTask={this.delTask} />
       </div>
     );
