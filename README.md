@@ -1,1 +1,3 @@
-# todo-list-app-react
+# Todo List App
+
+JS & React Training
