@@ -21,19 +21,19 @@ class AddToList extends React.Component {
 
   render () {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '0.5rem'
-      }}>
-        <form onSubmit={this.onSubmit}>
-          <input 
+      <div>
+        <form onSubmit={this.onSubmit} className="form-group">
+          <input
           type="text" 
+          className="input-text"
           name="title" 
           placeholder="Une autre tâche ?" 
           value= {this.state.title}
           onChange={this.onAdd} />
-          <input type="submit" value="Ajouter" />
+          <input 
+          type="submit" 
+          className="btn-submit"
+          value="Ajouter" />
         </form>
       </div>
     )

@@ -4,5 +4,139 @@
   padding: 0;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+  background-color: #f2f4f5;
+}
+.App {
+  margin: 0.5rem auto;
+  width: calc(100% - 5vw);
+  max-width: 38rem;
+  box-shadow: 0 0 5px -4px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #1a6c94;
+  background: linear-gradient(45deg, #4fccdc, #1a6c94);
+}
+.header_title {
+  padding: 1rem 1rem 0;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.input-text {
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+}
+.btn-submit {
+  padding: 1rem;
+  border: none;
+  background-color: #4fccdc;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.btn-submit:hover {
+  background-color: #6ce0ef;
+  cursor: pointer;
+}
+.checkbox-ctn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 1px solid #e6edf1;
+  text-decoration: none;
+  color: #000;
+}
+.checkbox-ctn:hover {
+  background-color: #e6edf1;
+}
+.checkbox {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.checkbox-label {
+  min-height: 5rem;
+  width: 100%;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 1rem 5rem;
+}
+.checkbox-label:before {
+  content: "";
+  position: absolute;
+  border: 1px solid;
+  background: #0000;
+}
+.checkbox-label:after {
+  box-sizing: content-box;
+  content: "";
+  position: absolute;
+  top: 1.9rem;
+  left: 1.9rem;
+  width: 1.2rem;
+  height: 0.5rem;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: solid;
+  border-width: 0 0 3px 3px;
+  border-top-color: #0000;
+  opacity: 0;
+  background: #0000;
+}
+.checkbox:checked + .checkbox-label:after {
+  opacity: 1;
+}
+.checkbox, .checkbox-label:before {
+  box-sizing: border-box;
+  top: 1rem;
+  left: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+.btn-delitem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-left: auto;
+  background: #fff;
+  border-width: 0 0 0px 1px;
+  border-left: 1px solid #e6edf1;
+}
+.btn-delitem:hover {
+  background: #e91e63;
+  cursor: pointer;
+}
+.ico-close {
+  display: inline-block;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+.ico-close:before, .ico-close:after {
+  position: absolute;
+  left: 50%;
+  content: ' ';
+  height: 2rem;
+  width: 2px;
+  background-color: #e91e63;
+}
+.btn-delitem:hover .ico-close:before, .btn-delitem:hover .ico-close:after {
+  background-color: #fff;
+}
+.ico-close:before {
+  transform: rotate(45deg);
+}
+.ico-close:after {
+  transform: rotate(-45deg);
 }
