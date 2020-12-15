@@ -1,5 +1,4 @@
-# Todo List App
-
+# Todo List
 JS & React Training
 
 ### Tech Stack
